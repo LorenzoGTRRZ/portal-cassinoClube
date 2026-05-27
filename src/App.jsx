@@ -2,18 +2,18 @@ import { useState } from 'react';
 
 // 1. Cole aqui os links reais que você copiou do Google Drive
 const LINKS_DRIVE = {
-  socios: {
-    dependentes: "https://drive.google.com/drive/folders/150TlvA2aF4tlY85VEGYrHrTD0g1uG0gk?usp=sharing",
-    efetivos: "https://drive.google.com/drive/folders/SEU_LINK_AQUI_2",
-    remidos: "https://drive.google.com/drive/folders/SEU_LINK_AQUI_3",
-    benemeritos: "https://drive.google.com/drive/folders/SEU_LINK_AQUI_4",
+  documentos: {
+    listaefetivos: "https://drive.google.com/drive/folders/13Fd6tEaUtVMJTujJWzvjLRuxnCORClX6?usp=sharing",
+    docgerais: "https://drive.google.com/drive/folders/150TlvA2aF4tlY85VEGYrHrTD0g1uG0gk?usp=sharing",
+    Sociosefetivosemmuitoatraso: "https://drive.google.com/drive/folders/1jkTWla-1LkzTPq8yatojSMolaqQ_Nt17?usp=sharing",
+    sociosremidos: "https://drive.google.com/drive/folders/1xvI-4-yA_-J47Y_3ctLdsZxP8E0KqHmG?usp=sharing",
   },
   eventos: {
     bingos: "https://drive.google.com/drive/folders/SEU_LINK_AQUI_5",
     fotos: "https://drive.google.com/drive/folders/SEU_LINK_AQUI_6",
     ingressos: "https://drive.google.com/drive/folders/SEU_LINK_AQUI_7",
   },
-  documentos: "https://drive.google.com/drive/folders/SEU_LINK_AQUI_8"
+  sss: "https://drive.google.com/drive/folders/SEU_LINK_AQUI_8"
 };
 
 export default function App() {
@@ -52,7 +52,7 @@ export default function App() {
               onClick={() => setTelaAtiva('socios')}
               className="bg-blue-600 hover:bg-blue-700 text-white text-3xl font-bold p-12 rounded-3xl shadow-lg transition-all active:scale-[0.98] text-left flex items-center justify-between border-4 border-blue-200"
             >
-              <span>📁 ARQUIVOS DE SÓCIOS</span>
+              <span>📁 Documentos do Clube</span>
               <span className="text-4xl">➔</span>
             </button>
 
@@ -81,17 +81,17 @@ export default function App() {
           <div className="bg-white p-8 rounded-3xl shadow-md border border-slate-200">
             <h2 className="text-3xl font-extrabold text-slate-800 mb-6 border-b pb-4">Pastas de Sócios:</h2>
             <div className="grid grid-cols-1 gap-4">
-              <a href={LINKS_DRIVE.socios.efetivos} target="_blank" rel="noopener noreferrer" className="bg-slate-800 hover:bg-slate-900 text-white text-2xl font-bold p-6 rounded-xl block text-center shadow shadow-md">
-                Abrir Pasta: Sócios Efetivos ↗
+              <a href={LINKS_DRIVE.documentos.docgerais} target="_blank" rel="noopener noreferrer" className="bg-slate-800 hover:bg-slate-900 text-white text-2xl font-bold p-6 rounded-xl block text-center shadow shadow-md">
+                📄 Documentos Gerais ↗
               </a>
-              <a href={LINKS_DRIVE.socios.remidos} target="_blank" rel="noopener noreferrer" className="bg-slate-800 hover:bg-slate-900 text-white text-2xl font-bold p-6 rounded-xl block text-center shadow shadow-md">
-                Abrir Pasta: Sócios Remidos ↗
+              <a href={LINKS_DRIVE.documentos.Sociosefetivosemmuitoatraso} target="_blank" rel="noopener noreferrer" className="bg-slate-800 hover:bg-slate-900 text-white text-2xl font-bold p-6 rounded-xl block text-center shadow shadow-md">
+                📄 Sócios efetivos em muito atraso ↗
               </a>
-              <a href={LINKS_DRIVE.socios.benemeritos} target="_blank" rel="noopener noreferrer" className="bg-slate-800 hover:bg-slate-900 text-white text-2xl font-bold p-6 rounded-xl block text-center shadow shadow-md">
-                Abrir Pasta: Sócios Beneméritos ↗
+              <a href={LINKS_DRIVE.documentos.sociosremidos} target="_blank" rel="noopener noreferrer" className="bg-slate-800 hover:bg-slate-900 text-white text-2xl font-bold p-6 rounded-xl block text-center shadow shadow-md">
+                📄 Sócios Remidos ↗
               </a>
-              <a href={LINKS_DRIVE.socios.dependentes} target="_blank" rel="noopener noreferrer" className="bg-slate-800 hover:bg-slate-900 text-white text-2xl font-bold p-6 rounded-xl block text-center shadow shadow-md">
-                Abrir Pasta: Fotos Dependentes ↗
+              <a href={LINKS_DRIVE.documentos.listaefetivos} target="_blank" rel="noopener noreferrer" className="bg-slate-800 hover:bg-slate-900 text-white text-2xl font-bold p-6 rounded-xl block text-center shadow shadow-md">
+                📄 Lista Efetivos
               </a>
             </div>
           </div>
