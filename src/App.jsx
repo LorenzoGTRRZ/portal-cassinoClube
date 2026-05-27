@@ -2,11 +2,11 @@ import { useState } from 'react';
 
 // 1. MÁGICA DO VITE: Puxa as fotos das CARTEIRAS
 // MÁGICA DO VITE: Puxa as fotos das CARTEIRAS (agora aceitando maiúsculas)
-const modulosCarteiras = import.meta.glob('./fotos-carteiras/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}', { eager: true });
+const modulosCarteiras = import.meta.glob('./fotos-carteiras/*.{jpg,jpeg,png,webp,bmp,JPG,JPEG,PNG,WEBP}', { eager: true });
 const fotosCarteiras = Object.values(modulosCarteiras).map((modulo) => modulo.default);
 
 // MÁGICA DO VITE: Puxa TODAS as fotos de todas as subpastas dentro de 'fotos-clube'
-const modulosFotosClube = import.meta.glob('./fotos-clube/*/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}', { eager: true });
+const modulosFotosClube = import.meta.glob('./fotos-clube/*/*.{jpg,jpeg,png,bmp,webp,JPG,JPEG,PNG,WEBP}', { eager: true });
 
 // Agrupa as fotos pela subpasta de forma automática
 const albunsClube = {};
@@ -32,7 +32,8 @@ const LISTA_ALBUNS = [
   { id: 'show-karine-cassino', titulo: 'Show Karine Cassino' },
   { id: 'show-karine-cassino-2', titulo: 'Show Karine Cassino 2' },
   { id: 'show-karine-cassino-3', titulo: 'Show Karine Cassino 3' },
-  { id: 'terca-2008', titulo: 'Terça 2008' }
+  { id: 'terca-2008', titulo: 'Terça 2008' },
+  { id: 'bingo', titulo: 'Bingo Foto'}
 ];
 
 // Links do Google Drive
@@ -44,10 +45,10 @@ const LINKS_DRIVE = {
     sociosremidos: "https://drive.google.com/drive/folders/1xvI-4-yA_-J47Y_3ctLdsZxP8E0KqHmG?usp=sharing",
   },
   fotos: {
-    bingos: "https://drive.google.com/drive/folders/SEU_LINK_AQUI_5",
+    bingos: "https://drive.google.com/drive/folders/15Sgnwyk_qUe5ahLwlVCV6x_S7Fcx4sl9?usp=sharing",
     ingressos: "https://drive.google.com/drive/folders/SEU_LINK_AQUI_7",
   },
-  sss: "https://drive.google.com/drive/folders/SEU_LINK_AQUI_8"
+  sss: "https://drive.google.com/drive/u/3/folders/150TlvA2aF4tlY85VEGYrHrTD0g1uG0gk"
 };
 
 export default function App() {
